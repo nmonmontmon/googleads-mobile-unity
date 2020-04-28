@@ -22,6 +22,10 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdValue;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.OnPaidEventListener;
+import com.google.android.gms.ads.ResponseInfo;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
 
 /**
  * Native interstitial implementation for the Google Mobile Ads Unity plugin.

@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdValue;
 import com.google.android.gms.ads.OnPaidEventListener;
+import com.google.android.gms.ads.ResponseInfo;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdCallback;

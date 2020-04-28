@@ -33,7 +33,7 @@ namespace GoogleMobileAds.Android
         public event EventHandler<EventArgs> OnAdLeavingApplication = delegate { };
         public event EventHandler<EventArgs> OnAdCompleted = delegate { };
 
-        public RewardBasedVideoAdClient(): base(Utils.UnityRewardBasedVideoAdListenerClassName)
+        public RewardBasedVideoAdClient() : base(Utils.UnityRewardBasedVideoAdListenerClassName)
         {
             AndroidJavaClass playerClass = new AndroidJavaClass(Utils.UnityActivityClassName);
             AndroidJavaObject activity =
@@ -78,6 +78,13 @@ namespace GoogleMobileAds.Android
         public string MediationAdapterClassName()
         {
             return this.androidRewardBasedVideo.Call<string>("getMediationAdapterClassName");
+        }
+
+        // Returns ad request response info
+        public IResponseInfoClient GetResponseInfoClient()
+        {
+
+            return new ResponseInfoClient(this.androidRewardBasedVideo);
         }
 
         #endregion
@@ -160,5 +167,3 @@ namespace GoogleMobileAds.Android
         #endregion
     }
 }
-
-

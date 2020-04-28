@@ -54,5 +54,8 @@ namespace GoogleMobileAds.Common
 
         // Sets the user id of current user.
         void SetUserId(string userId);
+
+        // Returns ad request Response info
+        IResponseInfoClient GetResponseInfoClient();
     }
 }
